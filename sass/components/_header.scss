@@ -1,0 +1,116 @@
+.header {
+
+    .wrapper {
+        position: relative;
+    } //wrapper ends
+
+    &__wrapper--top {
+        @media screen and (max-width: 76.8rem) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__top {
+        height: 84.5rem;
+        background: url(../img/bg.jpg) center/auto;
+    } //header__top ends
+
+    &__menu {
+
+        @include header-footer-menu () { 
+
+            &--logo { 
+                display: block;
+                height: 4rem;
+                width: 15.2rem;
+                text-decoration: none;
+                text-shadow: 1px 1px 2px black;
+
+                    p {
+                        font-size: 4.8rem;
+                        text-decoration: none;
+                        font-family: $main-font;
+                        color: #fff;
+
+                        span {
+                            font-size: 4.8rem;
+                            background: -webkit-linear-gradient(#734f82, #392a41);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            text-shadow: none;
+                        } // span for header logo p ends 
+                    } // header__menu--logo p ends
+            } // header__menu--logo ends       
+        } // mixin for a header menu ends
+    } // header__menu ends
+    &__arrow {
+        
+        &--1 {
+            @include arrow-generator (left, -3.5rem, -45deg);//mixin for arrows
+        } //1 
+        
+        &--2 {
+            @include arrow-generator (right, -7.5rem, 45deg);//mixin for arrows
+        } //2
+    } // code for arrows ends 
+    &__overlay {
+        position: relative;
+
+        &--backdrop {
+            height: 40rem;
+            width: 100%;
+            display: flex;
+            background-color: rgba(0,0,0,0.2);
+            flex-direction: row;
+            align-items: center;
+        } // code for header__overlay--backdrop ends 
+
+        &--logo {
+            position: relative;
+            top: -.3rem;
+            margin-left: 7.5rem;
+        } // code for header__overlay--logo ends 
+
+        &--info {
+            display: flex;
+            flex-direction: row;
+            font-family: $main-font;
+            align-items: center;
+        } // code for header__overlay--info ends 
+
+        &--description { 
+            display: flex;
+            flex-direction: column;
+            width: 51rem;
+            hyphens: auto;
+            text-align: justify;
+
+            &--heading_lg {
+                font-size: 6rem;
+                opacity: none;
+                color: #fff;
+            } // large heading style
+
+            &--heading_md {
+                font-size: 3.2rem;
+                color: #edbfff
+            } // middle heading style
+            
+            &--heading_text {
+                font-size: 1.8rem;
+                color: #d4d2d6;
+                text-shadow: 1px 1px #000000;
+                font-family: 'Open Sans', sans-serif;
+                line-height: 1.5rem;
+            } // slyle for text of heading
+        } // code for header__overlay--description ends 
+    } //header__overlay ends
+
+    &__slider {
+        @include slider-generator(1.7rem, 1.7rem, 47.5rem, 67.5rem, #f5f5f5); //a mixin for slider bullet-ponts
+    }
+}

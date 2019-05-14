@@ -1,0 +1,121 @@
+//Media Query manager
+
+/*
+320 - 479px: xs;
+480-767px: sm;
+768-959px: md;
+(960+px) lg - is where our normal styles apply;
+*/
+
+ @mixin respond($breakpoint) {
+    @if $breakpoint == 'xs' {
+        @media ( max-width: 32rem ) {
+        @content;
+        }
+    }
+    @if $breakpoint == 'sm' {
+        @media ( max-width: 48rem ) {
+        @content;
+        }
+    }
+    @if $breakpoint == 'md' {
+        @media ( max-width: 76.8rem ) {
+        @content;
+        }
+    }
+}
+
+//Triangle generator
+
+@mixin triangle-generator ($size, $side, $top: 0, $left: 0, $color, $angle) {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: $left;
+        top: $top;
+        border: $size solid transparent;
+        border-#{$side}-color: $color;
+        transform: rotate($angle);
+        filter: drop-shadow(1px -1px 5px  0 rgba(0, 0, 0, 0.75));
+    }
+}
+
+// UL slider generator
+
+@mixin slider-generator ($item-height, $item-width, $top: 0, $left: 0, $bg-color) {
+    position: absolute;
+    z-index: 99999;
+    width: 10rem;
+    height: 4rem;
+    top: $top;
+    left: $left;
+    .slider__list {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        opacity: 0.8;
+        &--item {
+            height: $item-height;
+            width: $item-width;
+            border-radius: 50%;
+            border: 3px solid #696571;
+            background-color: #696571;
+            margin: 4px;
+            box-shadow: 0 0 1px 0px ;
+            transition: all .2s ease;
+                &:hover{
+                    background-color: $bg-color;
+                    cursor: pointer;
+                }
+        }
+    }
+}
+
+// Arrow generator 
+
+@mixin arrow-generator ($horzontal-side: $coordinate-x, $angle, $top: 48%) {
+    position: absolute;
+    top: $top;
+    #{$horzontal-side}: $coordinate-x;
+    transform: translate(50%, 50%);
+    height: 22px;
+    width: 22px;
+    background: transparent;
+    border-top: 7px solid #f2f2f2;
+    border-left: 7px solid #f2f2f2;
+    border-radius: 5px;
+    transform: rotate($angle);
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.75));
+    &:hover, 
+    &:active {
+        cursor: pointer;
+        filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75));
+    }
+}
+
+@mixin header-footer-menu () {
+        &--items {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            font-size: 2.4rem;
+            width: 64rem;
+            text-shadow: 1px 1px 1px black;
+        }
+        &--link {
+            text-decoration: none;
+            font-family: $main-font;
+            text-transform: uppercase;
+            color: #fff;
+            position: relative;
+            padding: 0 7px;
+            margin: 4.2rem 0;
+            &:hover {
+                border-bottom: 2px solid #edbfff;
+            }
+        }
+    @content;
+}
+

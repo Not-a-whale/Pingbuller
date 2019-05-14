@@ -1,0 +1,18 @@
+
+*, *::before, *::after {
+    box-sizing: inherit;
+} //inheriting box sizing
+
+html {
+    font-size: 62.5%; // Defining rem value
+}
+
+body {
+    box-sizing: border-box;
+    //max-width: 2rem;
+} // sets the box sizing;
+
+.wrapper {
+    width: 96rem;
+    margin: 0 auto;
+} // defines overall wrapper for the page

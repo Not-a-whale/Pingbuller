@@ -1,0 +1,26 @@
+/* code for the footer of the website */
+
+.footer {
+    height: 11.4rem;
+    background-image: url(../img/footter_bg.png);
+    display: flex;
+    align-items: center;
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    } //footer__wrapper   
+    @include header-footer-menu ();
+    &__copyright {
+        font-family:'Open Sans', sans-serif;
+        font-size: 1.2rem;
+        color: #ffffff;
+        text-shadow: 1px 1px 2px #5f5762;
+
+        span {
+            font-weight: bold;
+        } // 2 leters' span
+    } // footer__copyright text
+} //the end of the footer
+ 

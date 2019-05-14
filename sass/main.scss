@@ -1,0 +1,10 @@
+//Abstracts
+@import '../sass/abstracts/mixins';
+@import '../sass/abstracts/fonts';
+@import '../sass/abstracts/variables';
+
+//Components 
+@import '../sass/components/base';
+@import '../sass/components/header';
+@import './components/main';
+@import './components/footer';

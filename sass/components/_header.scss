@@ -1,34 +1,44 @@
 .header {
-
+    width: 100%;
     .wrapper {
         position: relative;
     } //wrapper ends
 
     &__wrapper--top {
-        @media screen and (max-width: 76.8rem) {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            flex-wrap: wrap;
-        }
+        height: 27.8rem;
     }
 
     &__top {
         height: 84.5rem;
-        background: url(../img/bg.jpg) center/auto;
+        background-image: url(../img/bg.jpg);
+        background-position: center;
+        background-size: cover;
     } //header__top ends
 
     &__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 7rem;
+        
+        @include respond(md) {
+            height: 17.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-content: space-between;
+        }
 
         @include header-footer-menu () { 
 
             &--logo { 
-                display: block;
+                display: inline-block;
                 height: 4rem;
                 width: 15.2rem;
                 text-decoration: none;
                 text-shadow: 1px 1px 2px black;
-
+                
                     p {
                         font-size: 4.8rem;
                         text-decoration: none;
@@ -50,11 +60,15 @@
     &__arrow {
         
         &--1 {
-            @include arrow-generator (left, -3.5rem, -45deg);//mixin for arrows
+            @include arrow-generator (-45deg, left, .5vw);//mixin for arrows
         } //1 
         
         &--2 {
-            @include arrow-generator (right, -7.5rem, 45deg);//mixin for arrows
+            @include arrow-generator (-225deg, right, 6.5rem);//mixin for arrows
+            
+            @include respond(md) {
+                @include arrow-generator (-225deg, right, -3.5rem);
+            }
         } //2
     } // code for arrows ends 
     &__overlay {
@@ -88,6 +102,7 @@
             width: 51rem;
             hyphens: auto;
             text-align: justify;
+            padding-left: 4rem;
 
             &--heading_lg {
                 font-size: 6rem;
@@ -111,6 +126,6 @@
     } //header__overlay ends
 
     &__slider {
-        @include slider-generator(1.7rem, 1.7rem, 47.5rem, 67.5rem, #f5f5f5); //a mixin for slider bullet-ponts
+        @include slider-generator(1.7rem, 1.7rem, #f5f5f5, 47.5rem, 67.5rem); //a mixin for slider bullet-ponts
     }
 }

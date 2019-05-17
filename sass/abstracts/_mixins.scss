@@ -8,17 +8,17 @@
 */
 
  @mixin respond($breakpoint) {
-    @if $breakpoint == 'xs' {
+    @if $breakpoint == xs {
         @media ( max-width: 32rem ) {
         @content;
         }
     }
-    @if $breakpoint == 'sm' {
+    @if $breakpoint == sm {
         @media ( max-width: 48rem ) {
         @content;
         }
     }
-    @if $breakpoint == 'md' {
+    @if $breakpoint == md {
         @media ( max-width: 76.8rem ) {
         @content;
         }
@@ -27,7 +27,7 @@
 
 //Triangle generator
 
-@mixin triangle-generator ($size, $side, $top: 0, $left: 0, $color, $angle) {
+@mixin triangle-generator ($size, $side, $color, $angle, $top: 0, $left: 0) {
     position: relative;
 
     &::after {
@@ -44,7 +44,7 @@
 
 // UL slider generator
 
-@mixin slider-generator ($item-height, $item-width, $top: 0, $left: 0, $bg-color) {
+@mixin slider-generator ($item-height, $item-width, $bg-color, $top: 0, $left: 0) {
     position: absolute;
     z-index: 99999;
     width: 10rem;
@@ -75,7 +75,7 @@
 
 // Arrow generator 
 
-@mixin arrow-generator ($horzontal-side: $coordinate-x, $angle, $top: 48%) {
+@mixin arrow-generator ($angle, $horzontal-side: left, $coordinate-x: 17rem, $top: 48%) {
     position: absolute;
     top: $top;
     #{$horzontal-side}: $coordinate-x;

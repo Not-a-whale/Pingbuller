@@ -19,13 +19,20 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+            width: 29rem;
+            
+            @include respond (md) {
+                width: 20rem;
+            }
+
             &_icon {
                 display: flex;
                 justify-content: center;
                 position: relative;
-                top: .6rem;
+                top: 0.5rem;
+                left: -1rem;
                 width: 5.3rem;
-                
+
                 img {
                     height: 2.5rem;
                     width: 2.5rem;
@@ -40,6 +47,9 @@
                     font-family: $main-font;
                     color: #fff;
                     text-shadow: 1px 1px #000000;
+                    @include respond (md) {
+                        font-size: 2.4rem;
+                    }
                 }
 
                 p {
@@ -48,7 +58,6 @@
                     color: #d4d2d6;
                     text-align: left;
                     hyphens: auto;
-                    width: 22.3rem;
                     margin-top: 1.8rem;
                 }
 
@@ -69,6 +78,9 @@
                 }
 
             }
+        }
+        &--about:first-child {
+            margin-left: 1.5rem;
         }
 
         &--underline {
@@ -102,11 +114,14 @@
                 margin-right: 0;
                 padding: 3.3rem;
                 background: #fff;
+
                 @include triangle-generator (1.4rem, bottom, #fff, 45deg, 25.5rem, 37rem); // triangle for a comment box
 
                 
                 @include respond(md) {
-                    width: 50%;
+                    width: 31.2rem;
+                    margin: 9.7rem 2.7rem 0;
+                    height: 29rem;
                 }
 
                 &_icon {
@@ -120,8 +135,15 @@
                     color: $primary-color;
                     font-size: 3rem;
                     text-transform: uppercase;
+                    @include respond (md) {
+                        display: block;
+                        font-style: 2.4rem;
+                    }
                     span {
                         color: #edbfff;
+                        @include respond (md) {
+                            display: block;
+                        }
                     }
                 } // main__description--comment_heading ends
 
@@ -129,6 +151,9 @@
                     font-family: 'Open Sans', sans-serif;
                     font-size: 1.6rem;
                     hyphens: auto;
+                    @include respond (md) {
+
+                    }
                 } // text-styling
             } // the end of the main__description--comment block
 
@@ -137,11 +162,12 @@
                 flex-direction: column;
                 justify-content: space-between;
                 height: 26.5rem;
-                margin-top: 14em;
+                margin-top: 14rem;
                 width: 44.5rem;
 
                 @include respond(md) {
-                    width: 45%;
+                    width: 34rem;
+                    margin: 12.9rem 1rem 0 0;
                 }
 
                 &_heading {

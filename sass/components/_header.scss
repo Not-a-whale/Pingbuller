@@ -126,13 +126,3 @@
     }
 
 } //.header ends
-
-@include respond(md) {
-    .header__menu {
-        height: 17.5rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-content: space-between;
-    }
-}

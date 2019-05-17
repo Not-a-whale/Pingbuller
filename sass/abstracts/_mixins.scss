@@ -14,12 +14,12 @@
         }
     }
     @if $breakpoint == sm {
-        @media ( max-width: 48rem ) {
+        @media ( max-width: 76.8rem ) {
         @content;
         }
     }
     @if $breakpoint == md {
-        @media ( max-width: 76.8rem ) {
+        @media ( max-width: 96rem ) {
         @content;
         }
     }

@@ -21,7 +21,7 @@ body {
   margin: 0 auto; }
 
 .wrapper {
-  width: 96rem;
+  max-width: 96rem;
   margin: 0 auto; }
 
 .header {
@@ -92,7 +92,7 @@ body {
     .header__arrow--1:hover, .header__arrow--1:active {
       cursor: pointer;
       filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75)); }
-    @media (max-width: 76.8rem) {
+    @media (max-width: 96rem) {
       .header__arrow--1 {
         position: absolute;
         top: 48%;
@@ -125,7 +125,7 @@ body {
     .header__arrow--2:hover, .header__arrow--2:active {
       cursor: pointer;
       filter: drop-shadow(1px 1px 4px rgba(255, 255, 255, 0.75)); }
-    @media (max-width: 76.8rem) {
+    @media (max-width: 96rem) {
       .header__arrow--2 {
         position: absolute;
         top: 48%;
@@ -205,14 +205,6 @@ body {
           background-color: #f5f5f5;
           cursor: pointer; }
 
-@media (max-width: 76.8rem) {
-  .header__menu {
-    height: 17.5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    align-content: space-between; } }
-
 .main {
   /* main__info block */
   /* main_description block */
@@ -227,13 +219,14 @@ body {
     .main__info--wrapper {
       display: flex;
       flex-direction: row;
-      justify-content: space-between; }
+      justify-content: space-between;
+      width: 100%; }
     .main__info--about {
       display: flex;
       flex-direction: row;
       justify-content: center;
       width: 29rem; }
-      @media (max-width: 76.8rem) {
+      @media (max-width: 96rem) {
         .main__info--about {
           width: 20rem; } }
       .main__info--about_icon {
@@ -254,7 +247,7 @@ body {
           font-family: "LeagueGothic";
           color: #fff;
           text-shadow: 1px 1px #000000; }
-          @media (max-width: 76.8rem) {
+          @media (max-width: 96rem) {
             .main__info--about_text h1 {
               font-size: 2.4rem; } }
         .main__info--about_text p {
@@ -314,7 +307,7 @@ body {
         border-bottom-color: #fff;
         transform: rotate(45deg);
         filter: drop-shadow(1px -1px 5px 0 rgba(0, 0, 0, 0.75)); }
-      @media (max-width: 76.8rem) {
+      @media (max-width: 96rem) {
         .main__description--comment {
           width: 31.2rem;
           margin: 9.7rem 2.7rem 0;
@@ -328,13 +321,13 @@ body {
         color: #454545;
         font-size: 3rem;
         text-transform: uppercase; }
-        @media (max-width: 76.8rem) {
+        @media (max-width: 96rem) {
           .main__description--comment_heading {
             display: block;
             font-style: 2.4rem; } }
         .main__description--comment_heading span {
           color: #edbfff; }
-          @media (max-width: 76.8rem) {
+          @media (max-width: 96rem) {
             .main__description--comment_heading span {
               display: block; } }
       .main__description--comment_text {
@@ -348,7 +341,7 @@ body {
       height: 26.5rem;
       margin-top: 14rem;
       width: 44.5rem; }
-      @media (max-width: 76.8rem) {
+      @media (max-width: 96rem) {
         .main__description--updates {
           width: 34rem;
           margin: 12.9rem 1rem 0 0; } }
@@ -401,7 +394,7 @@ body {
       height: 1px;
       width: 100%;
       background-color: #e6e6e6; }
-      @media (max-width: 76.8rem) {
+      @media (max-width: 96rem) {
         .main__description--underline {
           display: none; } }
     .main__description--brands {

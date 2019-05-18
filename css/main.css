@@ -394,8 +394,8 @@ body {
         z-index: 99999;
         width: 10rem;
         height: 4rem;
-        top: 47.5rem;
-        left: 50.5rem; }
+        top: 44.5rem;
+        left: 23.5rem; }
         .header__slider .slider__list {
           display: flex;
           justify-content: center;
@@ -605,7 +605,7 @@ body {
           height: 29rem; } }
       @media (max-width: 768px) {
         .main__description--comment {
-          width: 45rem;
+          width: 46rem;
           margin: 6.7rem 2.7rem 0;
           height: 20.5rem; } }
       @media (max-width: 480px) {
@@ -823,7 +823,7 @@ body {
           z-index: 99999;
           width: 10rem;
           height: 4rem;
-          top: 24rem;
+          top: 33rem;
           left: 7.5rem; }
           .main__description--slider .slider__list {
             display: flex;

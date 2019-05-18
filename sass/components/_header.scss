@@ -215,7 +215,7 @@
         @include slider-generator(1.7rem, 1.7rem, #4d4b57, #f5f5f5, 47.5rem, 67.5rem); //a mixin for slider bullet-ponts
 
         @include respond (md) {
-            @include slider-generator(1.7rem, 1.7rem, #4d4b57, #f5f5f5, 47.5rem, 50.5rem); //a mixin for slider bullet-ponts
+            @include slider-generator(1.7rem, 1.7rem, #4d4b57, #f5f5f5, 44.5rem, 23.5rem); //a mixin for slider bullet-ponts
         }
         @include respond (sm) {
             @include slider-generator(1.7rem, 1.7rem, #4d4b57, #f5f5f5, 29.5rem, 15.5rem); //a mixin for slider bullet-ponts

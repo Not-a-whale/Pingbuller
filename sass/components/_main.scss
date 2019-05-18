@@ -160,7 +160,7 @@
                 }
 
                 @include respond (sm) {
-                    width: 45rem;
+                    width: 46rem;
                     margin: 6.7rem 2.7rem 0;
                     height: 20.5rem;
                 }
@@ -354,7 +354,7 @@
             }
 
             @include respond (xs) {
-                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 24rem, 7.5rem);
+                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 33rem, 7.5rem);
             }
         } // a mixin for a would be carousel slider bullet poined 
         .underline {

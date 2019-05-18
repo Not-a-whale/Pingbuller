@@ -150,8 +150,9 @@
                 padding: 3.3rem;
                 background: #fff;
 
+
                 @include triangle-generator (1.4rem, bottom, #fff, 45deg, 25.5rem, 37rem); // triangle for a comment box
-                
+
                 @include respond(md) {
                     width: 31.2rem;
                     margin: 9.7rem 2.7rem 0;
@@ -159,7 +160,7 @@
                 }
 
                 @include respond (sm) {
-                    width: 100%;
+                    width: 45rem;
                     margin: 6.7rem 2.7rem 0;
                     height: 20.5rem;
                 }
@@ -208,6 +209,7 @@
                 &_text {
                     font-family: 'Open Sans', sans-serif;
                     font-size: 1.6rem;
+                    overflow: hidden;
                     hyphens: auto;
                 } // text-styling
             } // the end of the main__description--comment block
@@ -352,7 +354,7 @@
             }
 
             @include respond (xs) {
-                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 33rem, 7.5rem);
+                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 24rem, 7.5rem);
             }
         } // a mixin for a would be carousel slider bullet poined 
         .underline {

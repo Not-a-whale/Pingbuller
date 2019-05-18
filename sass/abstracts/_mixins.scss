@@ -40,6 +40,10 @@
         border-#{$side}-color: $color;
         transform: rotate($angle);
         filter: drop-shadow(1px -1px 5px  0 rgba(0, 0, 0, 0.75));
+        
+        @include respond(md) {
+            display: none;
+        }
     }
 }
 
@@ -112,7 +116,7 @@
                 }
     
                 @include respond(sm) {
-                    width: 44rem;
+                    max-width: 85vw;
                     justify-content: center;
                 }
 
@@ -230,7 +234,7 @@
             }
 
             @include respond(sm) {
-                width: 44rem;
+                max-width: 44rem;
             }
         }
 

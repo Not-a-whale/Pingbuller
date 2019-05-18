@@ -87,7 +87,7 @@ body {
           margin-left: -4px; } }
       @media (max-width: 768px) {
         .header__menu--items {
-          width: 44rem;
+          max-width: 85vw;
           justify-content: center; } }
     .header__menu--item {
       position: relative;
@@ -595,6 +595,9 @@ body {
         border-bottom-color: #fff;
         transform: rotate(45deg);
         filter: drop-shadow(1px -1px 5px 0 rgba(0, 0, 0, 0.75)); }
+        @media (max-width: 960px) {
+          .main__description--comment::after {
+            display: none; } }
       @media (max-width: 960px) {
         .main__description--comment {
           width: 31.2rem;
@@ -602,7 +605,7 @@ body {
           height: 29rem; } }
       @media (max-width: 768px) {
         .main__description--comment {
-          width: 100%;
+          width: 45rem;
           margin: 6.7rem 2.7rem 0;
           height: 20.5rem; } }
       @media (max-width: 480px) {
@@ -641,6 +644,7 @@ body {
       .main__description--comment_text {
         font-family: 'Open Sans', sans-serif;
         font-size: 1.6rem;
+        overflow: hidden;
         hyphens: auto; }
     .main__description--updates {
       display: flex;
@@ -819,7 +823,7 @@ body {
           z-index: 99999;
           width: 10rem;
           height: 4rem;
-          top: 33rem;
+          top: 24rem;
           left: 7.5rem; }
           .main__description--slider .slider__list {
             display: flex;
@@ -991,7 +995,7 @@ body {
         width: 52.4rem; } }
     @media (max-width: 768px) {
       .footer__menu--items {
-        width: 44rem; } }
+        max-width: 44rem; } }
   .footer__menu--link {
     text-decoration: none;
     font-family: "LeagueGothic";

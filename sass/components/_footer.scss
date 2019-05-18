@@ -5,22 +5,43 @@
     background-image: url(../img/footter_bg.png);
     display: flex;
     align-items: center;
+
     &__wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+
+        @include respond (md) {
+            flex-direction: column;
+            height: 7rem;
+        }
+
+        @include respond (md) {
+            flex-direction: column;
+        }
     } //footer__wrapper   
 
     &__menu {
-        @include header-footer-menu ();
-    } //footer__menu
-    
+        @include header-footer-menu (footer);
+        @include respond (xs) {
+            display: none;
+        }
+    }    
     &__copyright {
         font-family:'Open Sans', sans-serif;
         font-size: 1.2rem;
         color: #ffffff;
         text-shadow: 1px 1px 2px #5f5762;
+        @include respond (md) {
+            align-self: flex-end;
+            padding-right: 2px;
+        }
+
+        @include respond (sm) {
+            align-self: center;
+        }
 
         span {
             font-weight: bold;

@@ -9,12 +9,22 @@ html {
 
 body {
     box-sizing: border-box;
-    vertical-align: baseline;
-    width: 100%;
     margin: 0 auto;
 } // sets the box sizing;
 
 .wrapper {
     max-width: 96rem;
     margin: 0 auto;
+
+    @include respond (md) {
+        max-width: 76.8rem;
+    }
+
+    @include respond (sm) {
+        max-width: 48rem;
+    }
+    
+    @include respond (xs) {
+        max-width: 32rem;
+    }
 } // defines overall wrapper for the page

@@ -8,12 +8,19 @@
         border-top: 1px solid #33253a;
         border-bottom: 1px solid #1d2f37;
         align-items: center;
+
         
+        @include respond (sm) {
+            height: 60rem;
+        }
+
         &--wrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            width: 100%;
+            @include respond (sm) {
+                flex-direction: column;
+            }
         } // the end of custom main__info--wrapper code
 
         &--about {
@@ -26,6 +33,14 @@
                 width: 20rem;
             }
 
+            @include respond (md) {
+                width: 44rem;
+            }
+
+            @include respond (md) {
+                width: 27rem;
+            }
+
             &_icon {
                 display: flex;
                 justify-content: center;
@@ -33,6 +48,9 @@
                 top: 0.5rem;
                 left: -1rem;
                 width: 5.3rem;
+                @include respond (sm) {
+                    top: 0;
+                }
 
                 img {
                     height: 2.5rem;
@@ -60,6 +78,10 @@
                     text-align: left;
                     hyphens: auto;
                     margin-top: 1.8rem;
+                    
+                    @include respond (md) {
+                        margin-top: 1.2rem;
+                    }
                 }
 
                 a {
@@ -76,12 +98,18 @@
                         &:hover {
                             text-shadow: 1px 1px .5rem #fff;
                         }
+                    @include respond (md) {
+                        margin-top: 1.4rem;
+                    }
                 }
 
             }
         }
         &--about:first-child {
             margin-left: 1.5rem;
+            @include respond (sm) {
+                margin-left: 0;
+            }
         }
 
         &--underline {
@@ -102,22 +130,27 @@
             flex-direction: row;
             justify-content: space-between;
             flex-wrap: wrap;
+            @include respond (sm) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+            }
         } // custom wrapper for description 
             &--comment {
                 display: flex;
                 position: relative;
                 flex-direction: column;
-                justify-content: space-around;
+                justify-content: flex-start;
                 box-shadow: 1px -1px 5px 0px rgba(0,0,0,0.05);
                 width: 42.7rem;
                 height: 27rem;
                 margin-top: 10rem;
-                margin-right: 0;
+                margin-left: 1.5rem;
                 padding: 3.3rem;
                 background: #fff;
 
                 @include triangle-generator (1.4rem, bottom, #fff, 45deg, 25.5rem, 37rem); // triangle for a comment box
-
                 
                 @include respond(md) {
                     width: 31.2rem;
@@ -125,10 +158,25 @@
                     height: 29rem;
                 }
 
+                @include respond (sm) {
+                    width: 100%;
+                    margin: 6.7rem 2.7rem 0;
+                    height: 20.5rem;
+                }
+
+                @include respond (xs) {
+                    width: 25.7rem;
+                    margin: 6.7rem 2.7rem 0;
+                    height: 20.5rem;
+                }
+
                 &_icon {
                     position: absolute;
                     top: 2.5rem;
                     left: -2.5rem;
+                    @include respond (sm) {
+                        top: 1.5rem;
+                    }
                 } //styles for an icon
 
                 &_heading {
@@ -138,12 +186,21 @@
                     text-transform: uppercase;
                     @include respond (md) {
                         display: block;
-                        font-style: 2.4rem;
+                        font-size: 2.4rem;
                     }
+
+                    @include respond (sm) {
+                        display: inline-block;
+                        font-size: 3rem;
+                    }
+
                     span {
                         color: #edbfff;
                         @include respond (md) {
                             display: block;
+                        }
+                        @include respond (sm) {
+                            display: inline-block;
                         }
                     }
                 } // main__description--comment_heading ends
@@ -152,9 +209,6 @@
                     font-family: 'Open Sans', sans-serif;
                     font-size: 1.6rem;
                     hyphens: auto;
-                    @include respond (md) {
-
-                    }
                 } // text-styling
             } // the end of the main__description--comment block
 
@@ -169,6 +223,15 @@
                 @include respond(md) {
                     width: 34rem;
                     margin: 12.9rem 1rem 0 0;
+                }
+
+                @include respond(sm) {
+                    width: 100%;
+                    margin: 12.9rem 1rem 0 0;
+                }
+
+                @include respond (xs) {
+                    margin: 16rem auto 0;
                 }
 
                 &_heading {
@@ -214,7 +277,8 @@
                                 font-size: 1.6rem;
                                 text-align: left;
                                 font-family: 'Open Sans', sans-serif;
-                                overflow: hidden;
+                                align-self: flex-start;
+                                justify-self: flex-start;
                             } // update text
                         } // div that contains all the text ends here 
                     } // end of an element code of main__description--updates_body
@@ -231,6 +295,7 @@
                     }
                 } //link for main__description--updates
             } // the end of the main_description--updates block
+
         &--underline {
             height: 1px;
             width: 100%;
@@ -247,15 +312,48 @@
     
             &-1 {
                 background-image: url(../img/logos.png);
-                width: 77.6rem;
+                background-position: center;
+                background-size: contain;
+                width: 77.9rem;
                 height: 6.7rem;
                 margin-top: 10rem;
                 margin-bottom: 5rem;
                 cursor: pointer;
+
+                @include respond (md) {
+                    width: 72.8rem;
+                }
+
+                @include respond (sm) {
+                    width: 35rem;
+                    height: 15.5rem;
+                    background-repeat: no-repeat;
+                    background-image: url(../img/logos-420.png);
+                }
+
+                @include respond (xs) {
+                    width: 28rem;
+                    height: 31rem;
+                    background-repeat: no-repeat;
+                    background-image: url(../img/logos-320.png);
+                }
+
             }
         } // brands picture
         &--slider {
-            @include slider-generator(1.5rem, 1.5rem, #f5f5f5, 29.5rem, 15.5rem);
+            @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 29.5rem, 15.5rem);
+
+            @include respond (md) {
+                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 31.5rem, 9.5rem);
+            }
+
+            @include respond (sm) {
+                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 23.5rem, 15.5rem);
+            }
+
+            @include respond (xs) {
+                @include slider-generator(1.5rem, 1.5rem, #f5f5f5, #5a5a5a, 33rem, 7.5rem);
+            }
         } // a mixin for a would be carousel slider bullet poined 
         .underline {
             position: absolute;
@@ -263,6 +361,9 @@
             width: 100%;
             background-color: #e6e6e6;
             top: 46rem;
+            @include respond (sm) {
+                top: 71rem;
+            }
         } // underline for the block body
     }
 
@@ -271,6 +372,18 @@
     &__comments { 
         height: 39.6rem;
         background-color: #ececec;
+        box-shadow: 0 1px 2px #000000;
+        
+        @include respond (sm) {
+            height: 67rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include respond (xs) {
+            display: none;
+        }
         
         &--wrapper {
             height: 100%;
@@ -278,14 +391,35 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+            @include respond (sm) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+            }
         } // a custom wrapper for a comments article
 
         &--article {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: flex-start;
             text-shadow: 1px 1px 1px #ffffff;
+
+            &:first-child {
+                @include respond (sm) {
+                    margin-top: 8rem;
+                }
+            }
+
+            @include respond (md) {
+                height: 19.5rem;
+                width: 20.5rem;
+            }   
+
+            @include respond (sm) {
+                width: 100%;
+            }
 
             &_logo {
                 font-family: $main-font;
@@ -293,6 +427,10 @@
                 color: $primary-color;
                 text-shadow: 0 0 1px #838383;
                 text-transform: uppercase;
+                
+                @include respond (md) {
+                    display: none;
+                }
 
                     span { 
                         color: #b9b9b9;
@@ -306,7 +444,27 @@
                 font-style: italic;
                 color: #c5c5c5;
                 padding-bottom: 1rem;
+
+                @include respond (md) {
+                    display: none;
+                }
             } // a copyright text for main__comments--article_copyright
+
+            &_heading-first {
+                display: none;
+                font-family: $main-font;
+                font-size: 3rem;
+                color: $primary-color;
+                text-align: left;
+                padding-bottom: .8rem;
+                text-transform: uppercase;
+
+                @include respond (md) {
+                    display: block;
+                    font-size: 2.4rem;
+                    align-self: top;
+                }
+            } // main__comments--article_heading
 
             &_heading {
                 font-family: $main-font;
@@ -315,6 +473,10 @@
                 text-align: left;
                 padding-bottom: .8rem;
                 text-transform: uppercase;
+
+                @include respond (md) {
+                    font-size: 2.4rem;
+                }
             } // main__comments--article_heading
 
             &_text {
@@ -326,6 +488,31 @@
                 letter-spacing:-0.06rem;
                 width: 27rem;
                 hyphens: auto;
+
+                @include respond (md) {
+                    width: 20.5rem;
+                }
+
+                @include respond (md) {
+                    width: 100%;
+                }
+                &-first {
+                    visibility: visible;
+                    position: relative;
+
+                    @include respond (md) {
+                        visibility: hidden;
+                    }
+                    &::after {
+                        @include respond (md) {
+                            visibility: visible;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            content: 'Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere. Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar. Quisque urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus';
+                        }
+                    } //replacing text
+                } // first p element
             } // main_comments--article_text block ends here
         } // main__comments--article section 
     } //the end of the main__comments section

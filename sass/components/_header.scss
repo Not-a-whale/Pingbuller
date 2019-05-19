@@ -91,6 +91,10 @@
                 @include arrow-generator (-45deg, left, -2.5vw);
             }
 
+            @include respond(md) {
+                @include arrow-generator (-45deg, left, -3.5vw);
+            }
+
             @include respond(xs) {
                 @include arrow-generator (-45deg, left, -7.5vw);
             }

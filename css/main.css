@@ -493,10 +493,10 @@ body {
       @media (max-width: 960px) {
         .main__info--about {
           width: 20rem; } }
-      @media (max-width: 960px) {
+      @media (max-width: 768px) {
         .main__info--about {
           width: 44rem; } }
-      @media (max-width: 960px) {
+      @media (max-width: 480px) {
         .main__info--about {
           width: 27rem; } }
       .main__info--about_icon {
@@ -605,7 +605,7 @@ body {
           height: 29rem; } }
       @media (max-width: 768px) {
         .main__description--comment {
-          width: 46rem;
+          width: 42rem;
           margin: 6.7rem 2.7rem 0;
           height: 20.5rem; } }
       @media (max-width: 480px) {
@@ -656,11 +656,11 @@ body {
       @media (max-width: 960px) {
         .main__description--updates {
           width: 34rem;
-          margin: 12.9rem 1rem 0 0; } }
+          margin: 12.9rem 0 0; } }
       @media (max-width: 768px) {
         .main__description--updates {
           width: 100%;
-          margin: 12.9rem 1rem 0 0; } }
+          margin: 12.9rem 0 0; } }
       @media (max-width: 480px) {
         .main__description--updates {
           margin: 16rem auto 0; } }

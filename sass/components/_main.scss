@@ -33,11 +33,11 @@
                 width: 20rem;
             }
 
-            @include respond (md) {
+            @include respond (sm) {
                 width: 44rem;
             }
 
-            @include respond (md) {
+            @include respond (xs) {
                 width: 27rem;
             }
 
@@ -160,7 +160,7 @@
                 }
 
                 @include respond (sm) {
-                    width: 46rem;
+                    width: 42rem;
                     margin: 6.7rem 2.7rem 0;
                     height: 20.5rem;
                 }
@@ -224,12 +224,12 @@
 
                 @include respond(md) {
                     width: 34rem;
-                    margin: 12.9rem 1rem 0 0;
+                    margin: 12.9rem 0 0;
                 }
 
                 @include respond(sm) {
                     width: 100%;
-                    margin: 12.9rem 1rem 0 0;
+                    margin: 12.9rem 0 0;
                 }
 
                 @include respond (xs) {
